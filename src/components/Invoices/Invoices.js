@@ -21,9 +21,10 @@ const Invoices = ({ invoices, onInvoiceClick, onSave }) => {
 
   const isMobile = isMobileScreen();
 
-  useEffect(() => {
-    setFilteredInvoices(filter(invoices, filterType));
-  }, [filterType]);
+ useEffect(() => {
+setFilteredInvoices(filter(invoices, filterType));
+}, [invoices, filterType]);
+
 
   const handleNewInvoiceClick = () => {
     setIsAddPopupOpen(!isAddPopupOpen);
